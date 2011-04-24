@@ -1,0 +1,161 @@
+                         /* ==========================================================================
+*  Project:   Latablette Theme Styles
+*  Copyright: ©2011 My Company, Inc.
+*  ==========================================================================
+*/
+/* 
+  Place any styles you want to define in this file.  You can also break your
+  styles into multiple files.  Just add them to your resources or .lrpoj
+  directories to be included in the build.
+*/
+/* line 15, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.base-view {
+  background: #cbdee9;
+}
+
+/* line 19, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.left-view {
+  z-index: 20;
+  max-width: 250px;
+}
+
+/* line 24, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.right-view {
+  z-index: 1;
+}
+
+/* line 28, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.toolbar-left {
+  background-image: url("/static/cloudflix/en/current/source/resources/images/toolbar.png?1303623641");
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 5px black;
+  -moz-box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 35, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.toolbar-right {
+  background-image: url("/static/cloudflix/en/current/source/resources/images/toolbar.png?1303623641");
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 5px black;
+  -moz-box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 42, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.line {
+  background-image: url("/static/cloudflix/en/current/source/resources/images/line.png?1303623641");
+}
+
+/* line 45, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.sc-list-item-view.has-icon label {
+  left: 65px;
+  top: 50%;
+  color: black;
+  font-family: Garamond, Garamond, 'Garamond Antiqua', times, serif !important;
+  font-size: 18px !important;
+  text-shadow: 1px 1px 3px #888;
+}
+
+/* line 54, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.sc-list-item-view img.icon {
+  max-width: 55px;
+  max-height: 55px;
+  top: 20%;
+  left: 15px !important;
+}
+
+/* line 67, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.frame {
+  opacity: 0;
+}
+
+/* line 71, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.fade {
+  z-index: 15;
+  border-radius: 20px;
+}
+
+/* line 76, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.exit {
+  z-index: 20;
+}
+
+/* line 84, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.itunesReview {
+  z-index: 20;
+}
+
+/* line 88, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.redButton {
+  border-radius: 40px;
+}
+
+/* line 93, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.grid {
+  border-bottom-style: inset;
+  border-right-style: inset;
+}
+
+/* line 98, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.backView {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+/* line 105, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.trail {
+  border-radius: 20px;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+/* line 115, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.fading {
+  z-index: 15;
+  opacity: 0;
+}
+
+/* line 120, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.itunesTopBar {
+  z-index: 20;
+}
+
+/* line 124, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.customPlayer {
+  z-index: 25;
+}
+
+/* line 128, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.searchField {
+  z-index: 0 !important;
+}
+
+/* line 132, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.arrows {
+  opacity: 0.7;
+}
+
+/* line 136, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.itunesFont {
+  font-color: gray!important;
+  color: gray!important;
+  font-family: Garamond, Garamond, 'Garamond Antiqua', times, serif !important;
+  font-size: 20px !important;
+}
+
+/* line 143, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+.poster {
+  border-radius: 20px;
+}
+
+/* line 147, ././tmp/chance/ee1fc2b5edc360111d0c44a29bcb334d.scss */
+trailersAdded {
+  font-color: white!important;
+  color: white!important;
+  font-family: Garamond, Garamond, 'Garamond Antiqua', times, serif !important;
+  font-size: 20px !important;
+  -moz-box-shadow: 5px 5px 5px #ccc;
+  -webkit-box-shadow: 5px 5px 5px #ccc;
+  box-shadow: 5px 5px 5px #ccc;
+}

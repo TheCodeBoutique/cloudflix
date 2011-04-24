@@ -1,0 +1,29 @@
+/* line 2, ././tmp/chance/c180b45b898cfce580cba33a1bc25aeb.scss */
+.sc-view.sc-main {
+  background: #262b32 url("/static/sproutcore/welcome/en/e3f6a469772a288ada8594670cf22ec0cc88b2f5/source/images/main-bg.png") repeat;
+}
+
+/* line 6, ././tmp/chance/c180b45b898cfce580cba33a1bc25aeb.scss */
+.app-selector {
+  background-color: #f4f4f4;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border: 1px solid #f4f4f4;
+  border-bottom-color: #fff;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.3) 0 3px 8px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.3) 0 3px 8px;
+}
+
+/* line 16, ././tmp/chance/c180b45b898cfce580cba33a1bc25aeb.scss */
+.sc-list-view .sc-list-item-view {
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+/* line 21, ././tmp/chance/c180b45b898cfce580cba33a1bc25aeb.scss */
+.sc-list-view .sc-list-item-view:first-child {
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+}
