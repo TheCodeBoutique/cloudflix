@@ -16,6 +16,8 @@ Cloudflix.main = function main() {
   //Render mainView
   //Cloudflix.getPath('mainPage.mainPane').append();
 var popResults = Cloudflix.store.find(popResultsQuery);
+var results = Cloudflix.storeB.find(resultsQuery);
+
 	Cloudflix.statechart.initStatechart();
 
 

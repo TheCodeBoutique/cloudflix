@@ -105,20 +105,6 @@ Cloudflix.CustomGrid = SC.View.extend({
 														})
 													);
 													childViews.push(add);
-													
-													var play = this.createChildView(
-															SC.ButtonView.design({
-															        layout: { bottom: 20, height: 24, left: 20, width: 70 },
-															        title:  "Play",
-																			controlSize: SC.SMALL_CONTROL_SIZE,
-																			content: content,
-																			//target:"Cloudflix.statechart",
-														 					action:"viewTrailer",
-																			isDefault: YES,
-																	
-															})
-															);
-															childViews.push(play);
 								
 								
 						this.set('childViews', childViews);

@@ -15,6 +15,7 @@ Cloudflix.motionController = SC.ObjectController.create(
 
   orientation: '',
   isInPortrait: false,
+	isShowingTitles: true,
 
   _orientationHasChanged: function() {
 
@@ -27,7 +28,7 @@ Cloudflix.motionController = SC.ObjectController.create(
         timing: 'ease-in-out'
       });
 			Cloudflix.mainPage.mainPane.splitView.rightPanel.mostPopular.animate('left',251,{duration:.5, timing:'ease-in-out'});
-
+			Cloudflix.mainPage.mainPane.splitView.rightPanel.justAdded.animate('left',251,{duration:.5, timing:'ease-in-out'});
     } else if (or === 'portrait') {
       console.log('animation port firing..');
       isPort = true;
@@ -36,7 +37,7 @@ Cloudflix.motionController = SC.ObjectController.create(
         timing: 'ease-in-out'
       });
 			Cloudflix.mainPage.mainPane.splitView.rightPanel.mostPopular.animate('left',0,{duration:.5, timing:'ease-in-out'});
-
+			Cloudflix.mainPage.mainPane.splitView.rightPanel.justAdded.animate('left',0,{duration:.5, timing:'ease-in-out'});
 
     } else if (isPort === true) {
       Cloudflix.mainPage.mainPane.splitView.rightPanel.testButton.animate('left', 0, {
@@ -44,7 +45,7 @@ Cloudflix.motionController = SC.ObjectController.create(
         timing: 'ease-in-out'
       });
 			Cloudflix.mainPage.mainPane.splitView.rightPanel.mostPopular.animate('left',0,{duration:.5, timing:'ease-in-out'});
-			
+			Cloudflix.mainPage.mainPane.splitView.rightPanel.justAdded.animate('left',0,{duration:.5, timing:'ease-in-out'});
     }
   }.observes('orientation')
 

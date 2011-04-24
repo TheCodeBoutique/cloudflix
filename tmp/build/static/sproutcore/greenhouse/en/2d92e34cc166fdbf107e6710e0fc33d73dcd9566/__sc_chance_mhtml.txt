@@ -1,2 +1,0 @@
-Content-Type: multipart/related; boundary="CHANCE__BOUNDARY__"
---CHANCE__BOUNDARY__--

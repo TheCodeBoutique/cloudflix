@@ -16,6 +16,7 @@ SC.mixin(Cloudflix, {
         },
 				loadContent: function(){
 					//var popResults = Cloudflix.store.find(popResultsQuery);
+					var results = Cloudflix.storeB.find(resultsQuery);
 				},
 				checkingOrientation: function(){
 					console.log('checking orientation...');
@@ -61,6 +62,8 @@ SC.mixin(Cloudflix, {
 					{
 						console.log('it is ipad');
 						Cloudflix.mainPage.mainPane.splitView.rightPanel.mostPopular.contentView.animate('width',10850,{duration:.5, timing:'ease-in-out'});
+						
+						Cloudflix.mainPage.mainPane.splitView.rightPanel.JustAdded.contentView.animate('width',10850,{duration:.5, timing:'ease-in-out'});
 						
 					}
 				}

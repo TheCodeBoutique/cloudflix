@@ -28,7 +28,7 @@ Cloudflix.mainPage = SC.Page.design({
 						childViews: 'topToolBar'.w(),
 						
 							topToolBar: SC.ToolbarView.design({
-								classNames: ['toolbar-left'],
+								//classNames: ['toolbar-left'],
 							  layout: { top: 0, left: 0, right: 0, height: 34 },
 							  anchorLocation: SC.ANCHOR_TOP,
 								childViews: 'toolbarSplit'.w(),
@@ -47,9 +47,38 @@ Cloudflix.mainPage = SC.Page.design({
 						classNames: ['right-view'],
 						backgroundColor: 'gray',
 				    autoResizeStyle: SC.RESIZE_AUTOMATIC,
-						childViews: 'topToolBar testButton mostPopular'.w(),
-		
+						childViews: 'topToolBar testButton mostPopular mostPopTitle justAdded justAddedTitle'.w(),
+						
+						mostPopTitle:SC.ToolbarView.design({
+							classNames:['most_pop'],
+						  layout: { top: 57, left: 201, width: 200, height: 34 },  
+						  childViews:'mostPopularLabel'.w(),
+									mostPopularLabel:SC.LabelView.design({
+												    layout: { centerY: 0, height: 24, centerX: 0, width: 200 },
+												    controlSize: SC.LARGE_CONTROL_SIZE,
+												    fontWeight: SC.BOLD_WEIGHT,
+														textAlign: SC.ALIGN_CENTER,
+									          escapeHTML: NO,
+												    isTextSelectable: YES,
+												    value:'Most Popular'
+												  	}),
+													}),
+													justAddedTitle:SC.ToolbarView.design({
+														classNames:['just_added'],
+													  layout: { top: 272, left: 201, width: 200, height: 34 },  
+													  childViews:'justAddedLabel'.w(),
+																justAddedLabel:SC.LabelView.design({
+																			    layout: { centerY: 0, height: 24, centerX: 0, width: 200 },
+																			    controlSize: SC.LARGE_CONTROL_SIZE,
+																			    fontWeight: SC.BOLD_WEIGHT,
+																					textAlign: SC.ALIGN_CENTER,
+																          escapeHTML: NO,
+																			    isTextSelectable: YES,
+																			    value:'Just Added'
+																			  	}),
+																				}),
 						mostPopular:SC.ScrollView.design({
+											classNames:['most_pop_scroll'],
 										  alwaysBounceVertical: NO,
 											autohidesHorizontalScroller: NO,
 											hasVerticalScroller: NO,
@@ -57,6 +86,7 @@ Cloudflix.mainPage = SC.Page.design({
 								    	layout: { top:35, height: 210, left: 251, right:0},
 
 										contentView:SC.View.design({
+												classNames:['most_pop_scroll'],
 										    layout:{top:0,bottom:0,width:14400,left:0},
 												childViews:'contentView'.w(),
 
@@ -73,8 +103,34 @@ Cloudflix.mainPage = SC.Page.design({
 					 									columnWidth: 170,
 														borderStyle: SC.BORDER_NONE, 
 															}),
-									})
-							}),
+														})
+													}),
+													justAdded:SC.ScrollView.design({
+																	  alwaysBounceVertical: NO,
+																		autohidesHorizontalScroller: NO,
+																		hasVerticalScroller: NO,
+																		borderStyle: SC.BORDER_NONE,
+															    	layout: { top:245, height: 210, left: 251, right:0},
+
+																	contentView:SC.View.design({
+																	    layout:{top:0,bottom:0,width:14900,left:0},
+																			childViews:'contentView'.w(),
+
+													        			contentView: Cloudflix.JustAddedGrid.design({
+																					classNames:['backView'],
+												 									contentBinding: 'Cloudflix.justAddedController.arrangedObjects',
+											   									selectionBinding: 'Cloudflix.justAddedController.selection',
+											   									contentValueKey: "title",
+											   									contentIconKey: "poster",
+											   									exampleView: Cloudflix.CustomGrid,
+											   									hasContentIcon:  YES,
+											   									escapeHTML: NO,
+											   									rowHeight: 200,
+												 									columnWidth: 170,
+																					borderStyle: SC.BORDER_NONE, 
+																						}),
+																					})
+																				}),
 						
 							testButton: SC.ButtonView.design({
 								  layout: { top: 50, height: 24, left: 220, width: 100 },
@@ -86,7 +142,6 @@ Cloudflix.mainPage = SC.Page.design({
 								classNames: ['toolbar-right'],
 							  layout: { top: 0, left: 0, right: 0, height: 34 },
 							  anchorLocation: SC.ANCHOR_TOP,
-								backgroundColor: 'blue',
 									childViews: 'popoverButton'.w(),
 
 									popoverButton: SC.ButtonView.design({
