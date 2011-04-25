@@ -17,8 +17,27 @@ Cloudflix.main = function main() {
   //Cloudflix.getPath('mainPage.mainPane').append();
 var popResults = Cloudflix.store.find(popResultsQuery);
 var results = Cloudflix.storeB.find(resultsQuery);
+var netflix = Cloudflix.storeC.find(netflixQuery);
 
-	Cloudflix.statechart.initStatechart();
+
+SC.Request.manager.inflight.addObserver('[]', function(array) {
+  var length=array.get('length');
+  SC.debug('Number of inflight requets are %@', length);
+  // Need to run with the SC Event Loop to update the visuals 
+  SC.RunLoop.begin();
+	Cloudflix.getPath('loadingPage.mainPane').append();
+	if(length >= 0)
+	{
+		console.log(true);
+		Cloudflix.statechart.initStatechart();
+	}
+	SC.RunLoop.end();
+	
+	
+	
+});
+
+	//Cloudflix.netflixController.authenticate();
 
 
 };

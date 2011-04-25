@@ -142,12 +142,22 @@ Cloudflix.mainPage = SC.Page.design({
 								classNames: ['toolbar-right'],
 							  layout: { top: 0, left: 0, right: 0, height: 34 },
 							  anchorLocation: SC.ANCHOR_TOP,
-									childViews: 'popoverButton'.w(),
+									childViews: 'popoverButton netflix'.w(),
 
 									popoverButton: SC.ButtonView.design({
 										  layout: { centerY: 0, height: 24, left: 12, width: 100 },
 										  title:  "Add Task"
 									}), // popover
+									netflix: SC.ButtonView.design({
+									        layout: { centerY:0, height: 30, right: 12, width: 100 },
+									        title:  "Netflix",
+													controlSize: SC.REGULAR_CONTROL_SIZE,
+													action: "netFlixSignIn",
+													isDefault: YES,
+													netFlixSignIn:function(){
+															Cloudflix.netflixController.authenticate();
+													}
+									      }),
 							}) //toolbar
 				  
 					})  //right panel

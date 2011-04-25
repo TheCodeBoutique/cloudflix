@@ -20,6 +20,7 @@ SC.mixin(Cloudflix, {
 				},
 				checkingOrientation: function(){
 					console.log('checking orientation...');
+					Cloudflix.getPath('loadingPage.mainPane').remove();
 					Cloudflix.getPath('mainPage.mainPane').append();
 					this.detectBrowser();
 

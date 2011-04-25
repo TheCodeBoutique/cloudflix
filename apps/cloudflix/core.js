@@ -23,6 +23,7 @@ Cloudflix = SC.Application.create(
   //store: SC.Store.create().from(SC.Record.fixtures),
 	store: SC.Store.create({ commitRecordsAutomatically: YES }).from('Cloudflix.MostPopularDataSource'),
 	storeB: SC.Store.create({ commitRecordsAutomatically: YES }).from('Cloudflix.JustAddedDataSource'),
+	storeC: SC.Store.create({ commitRecordsAutomatically: YES }).from('Cloudflix.NetflixDataSource'),
  
  device: SC.device.addObserver("orientation", this,
   function() {
